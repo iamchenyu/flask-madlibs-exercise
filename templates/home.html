@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1>Madlibs</h1>
+<form action="/form">
+  <label for="story-select">Please choose a story...</label>
+  <select name="story" id="story-select">
+    <option value="">--Please choose an option--</option>
+    {% for code in stories %}
+    <option value="{{code}}">{{code}}</option>
+    {% endfor %}
+  </select>
+  <button>Go!</button>
+</form>
+{% endblock %}
